@@ -1,6 +1,7 @@
 html {
   position: relative;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 *,
@@ -12,11 +13,16 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
+  font-family: Mulish, Arial, sans-serif;
+  font-weight: 300;
+  background-color: $back;
+  color: $textDark;
+  font-size: 1.6rem;
 }
 
 
-img, svg {
+img, svg, video {
+  display: block;
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -71,11 +77,25 @@ iframe {
 Чтобы контент не прижимался к краям экрана
 */
 .container {
-  max-width: 1240px;
-  padding: 0 30px;
+  padding: 0 1.6rem;
   margin: 0 auto;
 }
 
-.header {
-  background-color: $textDark;
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 2rem;
+  line-height: 1;
+  font-weight: 1000;
+  color: $back;
+  background: $textLite;
+  border-radius: 8rem;
+  &::after {
+    content: '';
+    display: block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url(/src/img/svgs/arrowRight.svg) right center no-repeat;
+  }
 }
