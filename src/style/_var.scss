@@ -2,5 +2,35 @@ $back: #FFAA05;
 $textDark:#000000;
 $textLite: #ffffff;
 
+@mixin mobile {
+   @media (min-width: 57.6rem) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media (min-width: 76.8rem) {
+      @content;
+}
+}
+
+@mixin laptop {
+   @media (min-width: 102.4rem) {
+      @content;
+}
+}
+
+@mixin desctop {
+   @media (min-width: 124rem) {
+      @content;
+}
+}
+
+@mixin forek {
+   @media (min-width: 160rem) {
+      @content;
+}
+}
+
 
 
