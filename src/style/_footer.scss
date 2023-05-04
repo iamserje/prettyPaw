@@ -1,0 +1,122 @@
+.footer {
+   padding-bottom: 3rem;
+
+   @include laptop {
+      padding-bottom: 5rem;
+   }
+
+   // .footer__container
+   &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 5.2rem;
+
+      @include mobile {
+         gap: 4rem;
+      }
+
+      @include laptop {
+         gap: 7.5rem;
+      }
+   }
+
+   &__first {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+
+      @include mobile {
+         flex-direction: row;
+         justify-content: space-between;
+         gap: 0;
+      }
+   }
+
+   &__second {
+      display: flex;
+      flex-direction: column;
+      gap: 5.2rem;
+
+      @include mobile {
+         flex-direction: row-reverse;
+         justify-content: space-between;
+         gap: 0;
+      }
+   }
+
+   // .footer__logo
+   &__logo {
+      width: 20rem;
+      height: 3.2rem;
+
+      @include laptop {
+         width: 36rem;
+         height: 5.6rem;
+      }
+   }
+
+   // .footer__list-social
+   &__list-social {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.6rem;
+
+      @include mobile {
+         padding-right: 11.3rem;
+      }
+
+      @include laptop {
+         gap: 3.6rem;
+      }
+   }
+
+   // .footer__social-item
+   &__social-item {
+      display: flex;
+      align-items: center;
+      width: 3.6rem;
+      height: 3.6rem;
+
+      @include laptop {
+         width: 5rem;
+         height: 5rem;
+      }
+   }
+
+   // .footer__social-link
+   &__social-link {
+   }
+
+   // .footer__developers
+   &__developers {
+   }
+
+   // .footer__copirite
+   &__copirite {
+   }
+}
+
+.developers {
+
+   // .developers__item
+   &__item:first-child {
+      margin-bottom: 1.9rem;
+
+      @include laptop {
+         margin-bottom: 1.6rem;
+      }
+   }
+
+   // .developers__link
+   &__link {
+   }
+}
+.up {
+   width: 3.6rem;
+   height: 3.6rem;
+   border-radius: 50%;
+   background: $textLite url(../img/svgs/arrowFooter.svg) center no-repeat;
+   position: fixed;
+   bottom: 3rem;
+   right: 3rem;
+}

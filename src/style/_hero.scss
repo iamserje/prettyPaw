@@ -1,0 +1,97 @@
+.hero {
+   position: relative;
+   background-image: url('../img/poster@1x.jpg');
+   background-image: image-set(
+      url('../img/webp/poster@2x.webp') 2x,
+      url('../img/webp/poster@1x.webp') 1x,
+      url('../img/poster@2x.jpg') 2x,
+      url('../img/poster@1x.jpg') 1x
+      );
+   background-position: center;
+   background-size: cover;
+
+   @include tablet {
+      background-image: url('../img/poster-laptop@1x.jpg');
+      background-image: image-set(
+         url('../img/webp/poster-laptop@2x.webp') 2x,
+         url('../img/webp/poster-laptop@1x.webp') 1x,
+         url('../img/poster-laptop@2x.jpg') 2x,
+         url('../img/poster-laptop@1x.jpg') 1x
+         );
+   }
+
+   @include laptop {
+      background-image: url('../img/poster-desktop@1x.jpg');
+      background-image: image-set(
+         url('../img/webp/poster-desktop@1x.webp') 1x,
+         url('../img/poster-desktop@1x.jpg') 1x
+         );
+   }
+
+   @include desktop {
+      background-image: url('../img/poster-desktop@1x.jpg');
+      background-image: image-set(
+         url('../img/webp/poster-desktop@2x.webp') 2x,
+         url('../img/webp/poster-desktop@1x.webp') 1x,
+         url('../img/poster-desktop@2x.jpg') 2x,
+         url('../img/poster-desktop@1x.jpg') 1x
+         );
+   }
+
+   @include forek {
+      background-image: url('../img/poster-desktop@2x.jpg');
+      background-image: image-set(
+         url('../img/webp/poster-desktop@4x.webp') 2x,
+            url('../img/webp/poster-desktop@2x.webp') 1x,
+            url('../img/poster-desktop@4x.jpg') 2x,
+            url('../img/poster-desktop@2x.jpg') 1x
+            );
+   }
+
+   // .hero__container
+   &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 10;
+      min-height: 55.4rem;
+      padding-top: 12rem;
+      padding-bottom: 5rem;
+
+      @include desktop {
+         min-height: 78rem;
+      }
+      @include forek {
+         min-height: 100vh;
+      }
+   }
+   // .hero__title
+   &__title {
+      margin-bottom: 1.4rem;
+      font-size: 4rem;
+      font-weight: 1000;
+      line-height: 1;
+      color: $back;
+      text-transform: uppercase;
+   }
+
+   // .hero__subtitle
+   &__subtitle {
+      font-size: 2rem;
+      line-height: 1;
+      color: $textLite;
+      text-transform: uppercase;
+   }
+   &::before {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+   }
+
+   &__video-bg {
+      z-index: 8;
+   }
+}
