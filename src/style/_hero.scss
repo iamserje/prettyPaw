@@ -59,6 +59,14 @@
       padding-top: 12rem;
       padding-bottom: 5rem;
 
+      @include tablet {
+         padding-bottom: calc(50px + 24 * ((100vw - 768px) / (1120 - 768)));
+      }
+
+      // @include laptop {
+      //    padding-bottom: 7.4rem;
+      // }
+
       @include desktop {
          min-height: 78rem;
       }
@@ -74,6 +82,16 @@
       line-height: 1;
       color: $back;
       text-transform: uppercase;
+
+      @include tablet {
+         font-size: calc(40px + 12 * ((100vw - 768px) / (1120 - 768)));
+         margin-bottom: calc(14px + 36 * ((100vw - 768px) / (1120 - 768)));
+      }
+
+      @include laptop {
+         margin-bottom: 4rem;
+         // font-size: 5.2rem;
+      }
    }
 
    // .hero__subtitle
@@ -82,6 +100,15 @@
       line-height: 1;
       color: $textLite;
       text-transform: uppercase;
+
+      @include tablet {
+         font-size: calc(20px + 20 * ((100vw - 768px) / (1120 - 768)));
+      }
+
+      @include laptop {
+         // margin-bottom: 4rem;
+         font-size: 4rem;
+      }
    }
    &::before {
       content: "";
