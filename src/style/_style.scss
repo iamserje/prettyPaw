@@ -128,4 +128,26 @@ iframe {
     height: 1.6rem;
     background: url(/src/img/svgs/arrowRight.svg) right center no-repeat;
   }
+
+  @include laptop {
+    padding: 1.7rem 3.2rem;
+    font-size: 2rem;
+    gap: 1rem;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1.6rem;
+  background-color: $textLite;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  width: 4rem;
+  height: 1rem;
+  border-radius: 1.6rem;
+  background-color: $back;
+  opacity: 1;
 }

@@ -3,7 +3,7 @@ $textDark: #000000;
 $textLite: #ffffff;
 
 @mixin mobile {
-   @media (min-width: 567px) {
+   @media (min-width: 600px) {
       @content;
    }
 }
