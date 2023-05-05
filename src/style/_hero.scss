@@ -60,7 +60,7 @@
       padding-bottom: 5rem;
 
       @include tablet {
-         padding-bottom: calc(50px + 24 * ((100vw - 768px) / (1120 - 768)));
+         padding-bottom: calc(50px + 50 * ((100vw - 768px) / (1239 - 768)));
       }
 
       // @include laptop {
@@ -69,9 +69,12 @@
 
       @include desktop {
          min-height: 78rem;
+         padding-bottom: 10rem;
       }
+
       @include forek {
          min-height: 100vh;
+         padding-bottom: 10rem;
       }
    }
    // .hero__title
