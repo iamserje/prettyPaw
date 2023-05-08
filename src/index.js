@@ -14,25 +14,28 @@ slidersInit('.about__slider', {
    }
 });
 
-// slidersInit('.about__slider', {
-//    pagination: {
-//       el: '.about__slider-pagination'
-//    },
-//    breakpoints: {
-//       768: {
-//          slidersPerView: 2,
-//          spaceBetween: 2
-//       },
-//       1024: {
-//          slidersPerView: 3,
-//          spaceBetween: 3
-//       },
-//       1240: {
-//          slidersPerView: 4,
-//          spaceBetween: 4
-//       }
-//    }
-// });
+slidersInit('.career__slider', {
+   pagination: {
+      el: '.career__slider-pagination'
+   },
+   breakpoints: {
+      768: {
+         slidesPerView: 'auto',
+         spaceBetween: 22,
+         pagination: false,
+      },
+      1024: {
+         slidesPerView: 'auto',
+         spaceBetween: 26,
+         pagination: false,
+      },
+      1240: {
+         slidesPerView: 'auto',
+         spaceBetween: 30,
+         pagination: false,
+      }
+   }
+});
 
 const videoBg = document.querySelector('.video-bg');
 videoBg.innerHTML = `
