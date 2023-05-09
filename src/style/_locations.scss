@@ -17,6 +17,7 @@
          margin: 0 auto;
       }
    }
+
    &__item {
       position: relative;
       padding: 5rem 1.6rem;
@@ -42,8 +43,124 @@
          z-index: -1;
          background-size: cover;
          background-position: center;
+
+         @include laptop {
+            background-image: none;
+         }
       }
 
+
+      &_manmalts {
+         &::before {
+            background-image: url(../img/mobil/mammals.jpg);
+            background-image: image-set(url(../img/webp/mammals.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/mammals_tablet.jpg);
+                  background-image: image-set(url(../img/webp/mammals_tablet.webp) 1x);
+               }
+
+               @include laptop {
+                  background-image: url(../img/laptop/mammals_laptop.jpg);
+                  background-image: image-set(url(../img/webp/mammals_laptop.webp) 1x);
+               }
+
+               @include forek {
+                  background-image: url(../img/desktop/mammals_desktop.jpg);
+                  background-image: image-set(url(../img/webp/mammals_desktop.webp) 1x);
+               }
+         }
+      }
+
+      &_birds {
+         &::before {
+            background-image: url(../img/mobil/birds.jpg);
+            background-image: age-set(url(../img/webp/birds.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/birds_tablet.jpg);
+                  background-image: image-set(url(../img/webp/birds_tablet.webp) 1x);
+               }
+
+               @include laptop {
+                  background-image: url(../img/laptop/birds_laptop.jpg);
+                  background-image: image-set(url(../img/webp/birds_laptop.webp) 1x);
+               }
+
+               @include forek {
+                  background-image: url(../img/desktop/birds_desktop.jpg);
+                  background-image: image-set(url(../img/webp/birds_desktop.webp) 1x);
+               }
+         }
+      }
+
+      &_reptiles {
+         &::before {
+            background-image: url(../img/mobil/reptiles.jpg);
+            background-image: image-set(url(../img/webp/reptiles.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/reptiles_tablet.jpg);
+                  background-image: image-set(url(../img/webp/reptiles_tablet.webp) 1x);
+               }
+
+               @include laptop {
+                  background-image: url(../img/laptop/reptiles_laptop.jpg);
+                  background-image: image-set(url(../img/webp/reptiles_laptop.webp) 1x);
+               }
+
+               @include forek {
+                  background-image: url(../img/desktop/reptiles_desktop.jpg);
+                  background-image: image-set(url(../img/webp/reptiles_desktop.webp) 1x);
+               }
+         }
+      }
+
+      &_water {
+         &::before {
+            background-image: url(../img/mobil/water.jpg);
+            background-image: age-set(url(../img/webp/water.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/water_tablet.jpg);
+                  background-image: age-set(url(../img/webp/water_tablet.webp) 1x);
+               }
+
+               @include laptop {
+                  background-image: url(../img/laptop/water_laptop.jpg);
+                  background-image: age-set(url(../img/webp/water_laptop.webp) 1x);
+               }
+
+               @include forek {
+                  background-image: url(../img/desktop/water_desktop.jpg);
+                  background-image: age-set(url(../img/webp/water_desktop.webp) 1x);
+               }
+         }
+      }
+
+      &_incects {
+         &::before {
+            background-image: url(../img/mobil/insects.jpg);
+            background-image: image-set(url(../img/webp/insects.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/insects_tablet.jpg);
+                  background-image: image-set(url(../img/webp/insects_tablet.webp) 1x);
+               }
+
+               @include laptop {
+                  background-image: url(../img/laptop/insects_laptop.jpg);
+                  background-image: image-set(url(../img/webp/insects_laptop.webp) 1x);
+               }
+
+               @include forek {
+                  background-image: url(../img/desktop/insects_desktop.jpg);
+                  background-image: image-set(url(../img/webp/insects_desktop.webp) 1x);
+               }
+         }
+      }
+
+      // after (lower) it is line
       &::after {
          content: "";
          position: absolute;
@@ -69,112 +186,8 @@
          }
       }
 
-      &_manmalts {
-         &::before {
-            background-image: url(../img/mobil/mammals.jpg);
-            background-image: image-set(url(../img/webp/mammals.webp) 1x);
-
-               @include tablet {
-                  background-image: url(../img/tablet/mammals_tablet.jpg);
-                  background-image: image-set(url(../img/webp/mammals_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/mammals_laptop.jpg);
-                  background-image: image-set(url(../img/webp/mammals_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/mammals_desktop.jpg);
-                  background-image: image-set(url(../img/webp/mammals_desktop.webp) 1x);
-               }
-         }
-      }
-      &_birds {
-         &::before {
-            background-image: url(../img/mobil/birds.jpg);
-            background-image: age-set(url(../img/webp/birds.webp) 1x);
-
-               @include tablet {
-                  background-image: url(../img/tablet/birds_tablet.jpg);
-                  background-image: image-set(url(../img/webp/birds_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/birds_laptop.jpg);
-                  background-image: image-set(url(../img/webp/birds_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/birds_desktop.jpg);
-                  background-image: image-set(url(../img/webp/birds_desktop.webp) 1x);
-               }
-         }
-      }
-      &_reptiles {
-         &::before {
-            background-image: url(../img/mobil/reptiles.jpg);
-            background-image: image-set(url(../img/webp/reptiles.webp) 1x);
-
-               @include tablet {
-                  background-image: url(../img/tablet/reptiles_tablet.jpg);
-                  background-image: image-set(url(../img/webp/reptiles_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/reptiles_laptop.jpg);
-                  background-image: image-set(url(../img/webp/reptiles_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/reptiles_desktop.jpg);
-                  background-image: image-set(url(../img/webp/reptiles_desktop.webp) 1x);
-               }
-         }
-      }
-      &_water {
-         &::before {
-            background-image: url(../img/mobil/water.jpg);
-            background-image: age-set(url(../img/webp/water.webp) 1x);
-
-               @include tablet {
-                  background-image: url(../img/tablet/water_tablet.jpg);
-                  background-image: age-set(url(../img/webp/water_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/water_laptop.jpg);
-                  background-image: age-set(url(../img/webp/water_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/water_desktop.jpg);
-                  background-image: age-set(url(../img/webp/water_desktop.webp) 1x);
-               }
-         }
-      }
-      &_incects {
-         &::before {
-            background-image: url(../img/mobil/insects.jpg);
-            background-image: image-set(url(../img/webp/insects.webp) 1x);
-
-               @include tablet {
-                  background-image: url(../img/tablet/insects_tablet.jpg);
-                  background-image: image-set(url(../img/webp/insects_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/insects_laptop.jpg);
-                  background-image: image-set(url(../img/webp/insects_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/insects_desktop.jpg);
-                  background-image: image-set(url(../img/webp/insects_desktop.webp) 1x);
-               }
-         }
-      }
    }
+
    &__item-title {
       margin-bottom: 1.6rem;
       font-size: 2rem;
@@ -198,12 +211,28 @@
          font-size: 3.2rem;
       }
    }
+
    &__item-descr {
       color: $textLite;
       line-height: 1.4;
 
       @include laptop {
          display: none;
+      }
+   }
+   // &::before {
+   //    content: "";
+   //    position: absolute;
+   //    z-index: 5;
+   //    inset: 0;
+   //    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 35.38%, #000000 100%);
+   // }
+
+   &__video-bg {
+      z-index: 8;
+
+      @include laptop {
+
       }
    }
 }
