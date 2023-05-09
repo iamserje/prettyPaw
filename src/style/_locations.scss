@@ -1,4 +1,5 @@
 .locations {
+   position: relative;
    &__list {
       @include laptop {
          display: flex;
