@@ -5,10 +5,12 @@ import 'swiper/scss/pagination';
 import './index.scss';
 import { slidersInit } from './modules/sliders';
 import { videoBackgroundInit } from './modules/videobackground';
+import { controlMenu } from './modules/menukontrol';
 
 
 // ese here
-
+controlMenu();
+videoBackgroundInit();
 const sliderItem = document.querySelectorAll('.career__image-item');
 sliderItem.forEach((slide, i) => {
    slide.classList.add(`career__image-item_${i % 2 ? 'even' : 'odd'}`)
@@ -43,4 +45,3 @@ slidersInit('.career__slider', {
    }
 });
 
-videoBackgroundInit();
