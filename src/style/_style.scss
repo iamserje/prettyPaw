@@ -2,6 +2,7 @@ html {
   position: relative;
   box-sizing: border-box;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -137,10 +138,30 @@ iframe {
     background: url(/src/img/svgs/arrowRight.svg) right center no-repeat;
   }
 
+  &:hover {
+    color: $textDark;
+    &::after {
+      background-image: url(/src/img/svgs/arrowRightBlack.svg);
+    }
+  }
+
+  &:active {
+    padding: 0.8rem 1.8rem;
+    color: $back;
+    border: 2px solid $textDark;
+    &::after {
+      background-image: url(/src/img/svgs/arrowRight.svg);
+    }
+  }
+
   @include laptop {
     padding: 1.7rem 3.2rem;
     font-size: 2rem;
     gap: 1rem;
+  }
+
+  &:active {
+    padding: 1.5rem 3rem;
   }
 }
 

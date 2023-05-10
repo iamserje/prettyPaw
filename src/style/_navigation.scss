@@ -55,6 +55,9 @@
          border-radius: 80px;
 
          &:hover {
+            color: $back;
+         }
+         &:active {
             color: $textLite;
             background-color: $back;
          }

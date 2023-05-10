@@ -13,7 +13,7 @@ export const controlMenu = () => {
       );
 
    navigationItems.forEach((elem, i) => {
-      const horiz = i % 2 ? 500 : -500;
+      const horiz = i % 2 ? 8500 : -500;
       timeLine.from(elem, {opacity: 0, x: horiz, duration: 1}, '-=1')
    });
 
