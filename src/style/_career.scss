@@ -96,10 +96,10 @@
       // height: unset;
 
       @include tablet {
-         &:nth-child(odd) {
+         &_odd {
             width: 34%;
          }
-         &:nth-child(even) {
+         &_even {
             width: 25%;
          }
       }

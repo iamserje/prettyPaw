@@ -77,6 +77,10 @@
          column-gap: 0;
       }
 
+      @include forek {
+         min-height: 600px;
+         height: min-content;
+      }
    }
 
    // .about__description

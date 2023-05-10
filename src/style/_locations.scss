@@ -222,15 +222,11 @@
    }
 
    &__video-bg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 8;
+      display: none;
 
       @include laptop {
-         z-index: 11;
+         display: block;
+         z-index: -1;
       }
    }
 }

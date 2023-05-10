@@ -4,9 +4,15 @@ import 'swiper/scss';
 import 'swiper/scss/pagination';
 import './index.scss';
 import { slidersInit } from './modules/sliders';
+import { videoBackgroundInit } from './modules/videobackground';
 
 
 // ese here
+
+const sliderItem = document.querySelectorAll('.career__image-item');
+sliderItem.forEach((slide, i) => {
+   slide.classList.add(`career__image-item_${i % 2 ? 'even' : 'odd'}`)
+});
 
 slidersInit('.about__slider', {
    pagination: {
@@ -37,12 +43,4 @@ slidersInit('.career__slider', {
    }
 });
 
-
-const videoBg = document.querySelectorAll('.video-bg');
-
-videoBg.forEach(block => {
-   block.innerHTML = `
-   <source src="video/nice-nature.webm" type="video/webm">
-   <source src="video/nice-nature.mp4" type="video/mp4">
-`;
-});
+videoBackgroundInit();
