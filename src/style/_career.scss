@@ -83,6 +83,10 @@
 
    // .career__slider
    &__slider {
+
+      @include laptop {
+         overflow: visible;
+      }
    }
 
    // .career__image-list
@@ -94,6 +98,10 @@
    // .career__image-item
    &__image-item {
       // height: unset;
+
+      @include laptop {
+         width: 48%;
+      }
 
       @include tablet {
          &_odd {
