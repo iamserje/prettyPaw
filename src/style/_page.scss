@@ -1,21 +1,109 @@
 .page {
-   padding-top: 11.3rem;
-}
+   padding-top: 4rem;
+   padding-bottom: 4rem;
 
-.laptop {
-   display: none;
-
-   @include tablet {
-      display: block;
+   @include laptop {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
    }
-}
 
-.career__picture_page {
-   max-width: 28.8rem;
-   max-height: 30.8rem;
-   margin-bottom: 4rem;
-}
+   &__container {
+      padding: 0 1.6rem;
 
-.career__link_page {
-   margin-bottom: 6rem;
+      @include tablet {
+         max-width: 984px;
+         padding: 0 3.2rem;
+      }
+
+      @include laptop {
+         max-width: 1144px;
+         padding-right: 3.2rem;
+         padding-left: 19.2rem;
+      }
+
+      @include desktop {
+         max-width: 920px;
+         margin: 0 auto;
+         padding: 0;
+      }
+   }
+
+   &__title {
+      font-size: 3.2rem;
+      font-weight: 1000;
+      line-height: 1;
+      color: $textLite;
+      text-transform: uppercase;
+      margin-bottom: 2.4rem;
+
+      @include laptop {
+         margin-bottom: 4rem;
+      }
+   }
+
+   &__text-block {
+      margin-bottom: 4rem;
+
+      @include laptop {
+         margin-bottom: 6rem;
+      }
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__text {
+      margin-bottom: 1.6rem;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__image-block {
+      margin-bottom: 4rem;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+
+      &_dubl {
+
+         @include tablet {
+            display: flex;
+            gap: 1.8rem;
+
+            .page__image {
+               width: calc(50% - 0.9rem);
+            }
+         }
+
+         @include laptop {
+            gap: 2rem;
+         }
+         @include desktop {
+            gap: 3rem;
+         }
+      }
+   }
+
+   &__image {
+      height: 30.8rem;
+      object-fit: cover;
+      border-radius: 1.6rem;
+
+      &:nth-child(2) {
+         display: none;
+      }
+
+      @include tablet {
+         height: auto;
+         flex-grow: 1;
+
+         &:nth-child(2) {
+            display: block;
+         }
+      }
+   }
 }

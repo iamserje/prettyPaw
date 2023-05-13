@@ -18,16 +18,16 @@
                   <a class="navigation__link" href="/index.html">Главная</a>
                </li>
                <li class="navigation__item">
-                  <a class="navigation__link" href="#career">О&nbsp;зоосаде</a>
+                  <a class="navigation__link" href="page.html#about">О&nbsp;зоосаде</a>
                </li>
                <li class="navigation__item">
-                  <a class="navigation__link" href="#locations">История</a>
+                  <a class="navigation__link" href="page.html#history">История</a>
                </li>
                <li class="navigation__item">
-                  <a class="navigation__link" href="#locations">Добрые&nbsp;дела</a>
+                  <a class="navigation__link" href="page.html#deeds">Добрые&nbsp;дела</a>
                </li>
                <li class="navigation__item">
-                  <a class="navigation__link" href="#career">Карьера</a>
+                  <a class="navigation__link" href="page.html#career">Карьера</a>
                </li>
             </ul>
             <button class="navigation__button" aria-label="Открыть меню"></button>
@@ -36,77 +36,54 @@
    </header>
 
    <main>
-      <section class="page-nav"></section>
+      <section class="page-nav">
+         <ul class="page-nav__list">
+            <li class="page-nav__item">
+               <a href="page.html#about" class="page-nav__link">О&nbsp;зоосаде</a>
+            </li>
+            <li class="page-nav__item">
+               <a href="page.html#history" class="page-nav__link">История</a>
+            </li>
+            <li class="page-nav__item">
+               <a href="page.html#deeds" class="page-nav__link">Добрые дела</a>
+            </li>
+            <li class="page-nav__item">
+               <a href="page.html#career" class="page-nav__link">Карьера</a>
+            </li>
+         </ul>
+      </section>
 
       <section class="page">
-         <div class="container career__container">
-            <h2 class="career__title">Карьера</h2>
-            <div class="career__content">
-               <p class="career__description">
+         <div class="container page__container">
+            <h1 class="page__title">Карьера</h1>
+            <div class="page__text-block">
+               <p class="page__text">
                   Карьера в нашей компании может предоставить много интересных и перспективных возможностей для людей, увлеченных животными и желающих развиваться в этой области.
                </p>
-               <p class="career__description">
+               <p class="page__text">
                   У нас есть возможности для трудоустройства в различных должностях, начиная от сотрудников магазина, где можно работать с клиентами и продавать товары для животных, до ветеринарных врачей и специалистов по уходу за животными в груминг-салонах. Также в компании есть возможности для работы в отделе маркетинга, управления персоналом и различных других сферах.
                </p>
             </div>
-            <div class="career__picture career__picture_page">
-               <picture class="career__image-wrap">
-                  <source srcset="./img/page/webp/pudel@2x.webp" media="(min-width:1280px)" type="image/webp">
-                  <source srcset="./img/page/pudel_laptop@2x.png" media="(min-width:1280px)">
-                  <source srcset="./img/page/webp/pudel_laptop.webp" media="(min-width:1024px)" type="image/webp">
-                  <source srcset="./img/page/pudel_laptop.png" media="(min-width:1024px)">
-                  <source srcset="./img/page/webp/pudel@2x.webp" media="(min-width:768px)" type="image/webp">
-                  <source srcset="./img/page/pudel@2x.png" media="(min-width:768px)">
-                  <source srcset="./img/page/webp/pudel_mobile.webp" type="image/webp">
-                  <img class="career__image" src="./img/page/pudel_mobile.png" alt="pudel" loading="lazy">
-               </picture>
-            </div>
-            <div class="career__content">
-               <p class="career__description">
+            <figure class="page__image-block">
+                  <img class="page__image" src="./img/page/pudel_laptop@2x.png" alt="pudel" loading="lazy">
+            </figure>
+            <div class="page__text-block">
+               <p class="page__text">
                   Компания предоставляет своим сотрудникам возможность профессионального роста и развития, проводя регулярные тренинги и курсы повышения квалификации. Кроме того, компания заботится о своих сотрудниках и предлагает им конкурентную заработную плату, социальные льготы, гибкий график работы и возможность работать удаленно.
                </p>
             </div>
-            <div class="career__picture career__picture_page">
-               <picture class="career__image-wrap">
-                  <source srcset="./img/page/webp/students_laptop@2x.webp" media="(min-width:1280px)" type="image/webp">
-                  <source srcset="./img/page/students_laptop@2x.png" media="(min-width:1280px)">
-                  <source srcset="./img/page/webp/students_laptop.webp" media="(min-width:1024px)" type="image/webp">
-                  <source srcset="./img/page/students_laptop.png" media="(min-width:1024px)">
-                  <source srcset="./img/page/webp/students@2x.webp" media="(min-width:768px)" type="image/webp">
-                  <source srcset="./img/page/students@2x.png" media="(min-width:768px)">
-                  <source srcset="./img/page/webp/students.webp" type="image/webp">
-                  <img class="career__image" src="./img/page/students.png" alt="parrots" loading="lazy">
-               </picture>
-            </div>
-            <div class="career__picture career__picture_page laptop">
-               <picture class="career__image-wrap">
-                  <source srcset="./img/page/webp/hands_laptop@2x.webp" media="(min-width:1280px)" type="image/webp">
-                  <source srcset="./img/page/hands_laptop@2x.png" media="(min-width:1280px)">
-                  <source srcset="./img/page/webp/hands_laptop.webp" media="(min-width:1024px)" type="image/webp">
-                  <source srcset="./img/page/hands_laptop.png" media="(min-width:1024px)">
-                  <source srcset="./img/page/webp/hands@2x.webp" media="(min-width:768px)" type="image/webp">
-                  <source srcset="./img/page/hands@2x.png" media="(min-width:768px)">
-                  <source srcset="./img/page/webp/hands.webp" type="image/webp">
-                  <img class="career__image" src="./img/page/hands.png" alt="fulgens" loading="lazy">
-               </picture>
-            </div>
-            <div class="career__content">
-               <p class="career__description">
+            <figure class="page__image-block page__image-block_dubl">
+               <img class="page__image" src="./img/page/students_laptop@2x.png" alt="pudel" loading="lazy">
+               <img class="page__image" src="./img/page/hands_laptop@2x.png" alt="pudel" loading="lazy">
+            </figure>
+            <div class="page__text-block">
+               <p class="page__text">
                   Чтобы начать у нас карьеру, желательно иметь опыт работы с животными или образование в соответствующей области, такой как ветеринарная медицина или зоотехника. Но даже если у вас нет такого опыта или образования, вы можете получить его, работая в компании и проходя обучение на месте.
                </p>
             </div>
-            <div class="career__picture career__picture_page">
-               <picture class="career__image-wrap">
-                  <source srcset="./img/page/webp/nurse_laptop@2x.webp" media="(min-width:1280px)" type="image/webp">
-                  <source srcset="./img/page/nurse_laptop@2x.png" media="(min-width:1280px)">
-                  <source srcset="./img/page/webp/nurse_laptop.webp" media="(min-width:1024px)" type="image/webp">
-                  <source srcset="./img/page/nurse_laptop.png" media="(min-width:1024px)">
-                  <source srcset="./img/page/webp/nurse@2x.webp" media="(min-width:768px)" type="image/webp">
-                  <source srcset="./img/page/nurse@2x.png" media="(min-width:768px)">
-                  <source srcset="./img/page/webp/nurse_mobile.webp" type="image/webp">
-                  <img class="career__image" src="./img/page/nurse_mobile.png" alt="giraffe" loading="lazy">
-               </picture>
-            </div>
+            <figure class="page__image-block">
+               <img class="page__image" src="./img/page/nurse_laptop@2x.png" alt="pudel" loading="lazy">
+            </figure>
             <a class="button career__link career__link_page" href="">Подробнее</a>
          </div>
       </section>
