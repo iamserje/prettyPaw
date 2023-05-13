@@ -1,11 +1,32 @@
 .locations {
    position: relative;
    &__list {
+      position: relative;
+      z-index: 10;
+      --background-image: none;
+      --opacity: none;
       @include laptop {
          display: flex;
          justify-content: space-between;
          min-height: 55.2rem;
-         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+         &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            background-image: var(--background-image);
+            opacity: var(--opacity);
+         }
       }
 
       @include desktop {
@@ -33,7 +54,7 @@
 
       @include laptop {
          background-image: none;
-         flex: 0 0 calc(100% / 5);
+         width: 20%;
          padding: 0;
       }
 
@@ -50,7 +71,7 @@
          }
       }
 
-      &_manmalts {
+      &_mammals {
          &::before {
             background-image: url(../img/mobil/mammals.jpg);
             background-image: image-set(url(../img/webp/mammals.webp) 1x);
@@ -58,16 +79,6 @@
                @include tablet {
                   background-image: url(../img/tablet/mammals_tablet.jpg);
                   background-image: image-set(url(../img/webp/mammals_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/mammals_laptop.jpg);
-                  background-image: image-set(url(../img/webp/mammals_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/mammals_desktop.jpg);
-                  background-image: image-set(url(../img/webp/mammals_desktop.webp) 1x);
                }
          }
       }
@@ -81,16 +92,6 @@
                   background-image: url(../img/tablet/birds_tablet.jpg);
                   background-image: image-set(url(../img/webp/birds_tablet.webp) 1x);
                }
-
-               @include laptop {
-                  background-image: url(../img/laptop/birds_laptop.jpg);
-                  background-image: image-set(url(../img/webp/birds_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/birds_desktop.jpg);
-                  background-image: image-set(url(../img/webp/birds_desktop.webp) 1x);
-               }
          }
       }
 
@@ -102,16 +103,6 @@
                @include tablet {
                   background-image: url(../img/tablet/reptiles_tablet.jpg);
                   background-image: image-set(url(../img/webp/reptiles_tablet.webp) 1x);
-               }
-
-               @include laptop {
-                  background-image: url(../img/laptop/reptiles_laptop.jpg);
-                  background-image: image-set(url(../img/webp/reptiles_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/reptiles_desktop.jpg);
-                  background-image: image-set(url(../img/webp/reptiles_desktop.webp) 1x);
                }
          }
       }
@@ -125,20 +116,10 @@
                   background-image: url(../img/tablet/water_tablet.jpg);
                   background-image: age-set(url(../img/webp/water_tablet.webp) 1x);
                }
-
-               @include laptop {
-                  background-image: url(../img/laptop/water_laptop.jpg);
-                  background-image: age-set(url(../img/webp/water_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/water_desktop.jpg);
-                  background-image: age-set(url(../img/webp/water_desktop.webp) 1x);
-               }
          }
       }
 
-      &_incects {
+      &_insects {
          &::before {
             background-image: url(../img/mobil/insects.jpg);
             background-image: image-set(url(../img/webp/insects.webp) 1x);
@@ -147,21 +128,11 @@
                   background-image: url(../img/tablet/insects_tablet.jpg);
                   background-image: image-set(url(../img/webp/insects_tablet.webp) 1x);
                }
-
-               @include laptop {
-                  background-image: url(../img/laptop/insects_laptop.jpg);
-                  background-image: image-set(url(../img/webp/insects_laptop.webp) 1x);
-               }
-
-               @include forek {
-                  background-image: url(../img/desktop/insects_desktop.jpg);
-                  background-image: image-set(url(../img/webp/insects_desktop.webp) 1x);
-               }
          }
       }
 
       // after (lower) it is line
-      &::after {
+      &:not(:last-child):after {
          content: "";
          position: absolute;
          z-index: 5;
@@ -188,6 +159,16 @@
 
    }
 
+   &__content {
+      @include laptop {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: rotate(-90deg) translate(-50%, -50%);
+         transform-origin: top left;
+      }
+   }
+
    &__item-title {
       margin-bottom: 1.6rem;
       font-size: 2rem;
@@ -198,17 +179,15 @@
       white-space: nowrap;
 
       @include laptop {
-         position: absolute;
-         top: 50%;
-         left: 50%;
          margin-bottom: 0;
          color: $textLite;
-         transform: rotate(-90deg) translate(-50%, -50%);
-         transform-origin: top left;
+         text-align: center;
+         padding: 0 2rem;
       }
 
       @include desktop {
          font-size: 3.2rem;
+         padding: 0 3rem;
       }
    }
 
@@ -218,6 +197,14 @@
 
       @include laptop {
          display: none;
+         padding: 0 2rem;
+         text-align: center;
+         font-size: 1.6rem;
+      }
+
+      @include desktop {
+         padding: 0 3rem;
+         font-size: 2rem;
       }
    }
 

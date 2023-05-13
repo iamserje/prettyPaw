@@ -7,11 +7,6 @@
       padding-bottom: 10rem;
    }
 
-   // .career__container
-   &__container {
-
-   }
-
    // .career__content
    &__content {
       margin-bottom: 4rem;
@@ -81,13 +76,6 @@
       }
    }
 
-   // .career__slider
-   &__slider {
-
-      @include laptop {
-         overflow: visible;
-      }
-   }
 
    // .career__image-list
    &__image-list {
@@ -99,7 +87,7 @@
    &__image-item {
       // height: unset;
 
-      @include laptop {
+      @include mobile {
          width: 48%;
       }
 
@@ -121,27 +109,14 @@
       }
    }
 
-   // .career__image-wrap
-   &__image-wrap {
-   }
-
    // .career__img
    &__img {
       border-radius: 1.6rem;
    }
-}
 
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper-pagination {
-}
-.swiper-button-prev {
-}
-.swiper-button-next {
-}
-.swiper-scrollbar {
+   .__slider-pagination {
+       @include mobile {
+         display: none;
+       }
+   }
 }

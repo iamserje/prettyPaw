@@ -1,0 +1,21 @@
+.page {
+   padding-top: 11.3rem;
+}
+
+.laptop {
+   display: none;
+
+   @include tablet {
+      display: block;
+   }
+}
+
+.career__picture_page {
+   max-width: 28.8rem;
+   max-height: 30.8rem;
+   margin-bottom: 4rem;
+}
+
+.career__link_page {
+   margin-bottom: 6rem;
+}
