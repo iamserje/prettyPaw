@@ -3,7 +3,7 @@
    padding-bottom: 4rem;
 
    @include laptop {
-      padding-top: 10rem;
+      padding-top: 21.6rem;
       padding-bottom: 10rem;
    }
 
@@ -11,13 +11,12 @@
       padding: 0 1.6rem;
 
       @include tablet {
-         max-width: 984px;
-         padding: 0 3.2rem;
+         max-width: 980px;
+         padding: 0 3rem;
       }
 
       @include laptop {
-         max-width: 1144px;
-         padding-right: 3.2rem;
+         max-width: 1142px;
          padding-left: 19.2rem;
       }
 
@@ -55,6 +54,10 @@
 
    &__text {
       margin-bottom: 1.6rem;
+
+      @include laptop {
+         margin-bottom: 2rem;
+      }
 
       &:last-child {
          margin-bottom: 0;

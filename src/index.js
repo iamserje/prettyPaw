@@ -7,12 +7,14 @@ import { slidersInit } from './modules/sliders';
 import { videoBackgroundInit } from './modules/videobackground';
 import { controlMenu } from './modules/menukontrol';
 import { locationHover } from './modules/locationHover';
+import { pageControlInit } from './modules/pageKontrol';
 
 
 // ese here
 controlMenu();
 videoBackgroundInit();
 locationHover();
+pageControlInit();
 
 const sliderItem = document.querySelectorAll('.career__image-item');
 sliderItem.forEach((slide, i) => {
