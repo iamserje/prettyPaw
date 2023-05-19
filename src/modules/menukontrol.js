@@ -51,6 +51,10 @@ export const controlMenu = () => {
          navigationItems.forEach((elem, i) => {
             const horiz = i % 2 ? 500 : -500;
             gsap.set(elem, {opacity: 0, x: horiz, duration: 1});
+            if (navigationButton.classList.contains('navigation__button_active')) {
+
+            timeLine.restart();
+            }
          });
       }
    };

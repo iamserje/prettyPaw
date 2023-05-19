@@ -23,29 +23,37 @@ sliderItem.forEach((slide, i) => {
 
 slidersInit('.about__slider', {
    pagination: {
-      el: '.about__slider-pagination'
+      el: '.about__slider-pagination',
+      enabled: true,
    }
 });
 
 slidersInit('.career__slider', {
    pagination: {
-      el: '.career__slider-pagination'
+      el: '.career__slider-pagination',
+      enabled: true,
    },
    breakpoints: {
       600: {
          slidesPerView: 'auto',
          spaceBetween: 22,
-         pagination: false,
+         pagination: {
+            enabled: false
+         },
       },
       1024: {
          slidesPerView: 'auto',
          spaceBetween: 26,
-         pagination: false,
+         pagination: {
+            enabled: false
+         },
       },
       1240: {
          slidesPerView: 'auto',
          spaceBetween: 30,
-         pagination: false,
+         pagination: {
+            enabled: false
+         },
       }
    }
 });
