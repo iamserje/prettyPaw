@@ -1,0 +1,219 @@
+.locations {
+   position: relative;
+   &__list {
+      position: relative;
+      z-index: 10;
+      --background-image: none;
+      --opacity: none;
+      @include laptop {
+         display: flex;
+         justify-content: space-between;
+         min-height: 55.2rem;
+
+         &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-position: center;
+            background-size: cover;
+            background-image: var(--background-image);
+            opacity: var(--opacity);
+         }
+      }
+
+      @include desktop {
+         min-height: 78rem;
+      }
+
+      @include forek {
+         min-height: 100vh;
+         max-width: 2560px;
+         margin: 0 auto;
+      }
+   }
+
+   &__item {
+      position: relative;
+      padding: 5rem 1.6rem;
+      min-height: 27.3rem;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+      @include tablet {
+         padding-left: 3.2rem;
+         padding-right: 3.2rem;
+         min-height: 20rem;
+      }
+
+      @include laptop {
+         background-image: none;
+         width: 20%;
+         padding: 0;
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         inset: 0;
+         z-index: -1;
+         background-size: cover;
+         background-position: center;
+
+         @include laptop {
+            background-image: none;
+         }
+      }
+
+      &_mammals {
+         &::before {
+            background-image: url(../img/mobil/mammals.jpg);
+            background-image: image-set(url(../img/webp/mammals.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/mammals_tablet.jpg);
+                  background-image: image-set(url(../img/webp/mammals_tablet.webp) 1x);
+               }
+         }
+      }
+
+      &_birds {
+         &::before {
+            background-image: url(../img/mobil/birds.jpg);
+            background-image: age-set(url(../img/webp/birds.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/birds_tablet.jpg);
+                  background-image: image-set(url(../img/webp/birds_tablet.webp) 1x);
+               }
+         }
+      }
+
+      &_reptiles {
+         &::before {
+            background-image: url(../img/mobil/reptiles.jpg);
+            background-image: image-set(url(../img/webp/reptiles.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/reptiles_tablet.jpg);
+                  background-image: image-set(url(../img/webp/reptiles_tablet.webp) 1x);
+               }
+         }
+      }
+
+      &_water {
+         &::before {
+            background-image: url(../img/mobil/water.jpg);
+            background-image: age-set(url(../img/webp/water.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/water_tablet.jpg);
+                  background-image: age-set(url(../img/webp/water_tablet.webp) 1x);
+               }
+         }
+      }
+
+      &_insects {
+         &::before {
+            background-image: url(../img/mobil/insects.jpg);
+            background-image: image-set(url(../img/webp/insects.webp) 1x);
+
+               @include tablet {
+                  background-image: url(../img/tablet/insects_tablet.jpg);
+                  background-image: image-set(url(../img/webp/insects_tablet.webp) 1x);
+               }
+         }
+      }
+
+      // after (lower) it is line
+      &:not(:last-child):after {
+         content: "";
+         position: absolute;
+         z-index: 5;
+         display: block;
+         bottom: 0;
+         right: 50%;
+         height: 1px;
+         width: calc(100% - 3.2rem);
+         background-color: $textLite;
+         transform: translate(50%, 1px);
+
+         @include laptop {
+            bottom: 50%;
+            right: 0;
+            transform: translate(1px, 50%);
+            height: calc(100% - 18.6rem);
+            width: 1px;
+         }
+
+         @include desktop {
+            height: calc(100% - 20rem);
+         }
+      }
+
+   }
+
+   &__content {
+      @include laptop {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: rotate(-90deg) translate(-50%, -50%);
+         transform-origin: top left;
+      }
+   }
+
+   &__item-title {
+      margin-bottom: 1.6rem;
+      font-size: 2rem;
+      font-weight: 1000;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $back;
+      white-space: nowrap;
+
+      @include laptop {
+         margin-bottom: 0;
+         color: $textLite;
+         text-align: center;
+         padding: 0 2rem;
+      }
+
+      @include desktop {
+         font-size: 3.2rem;
+         padding: 0 3rem;
+      }
+   }
+
+   &__item-descr {
+      color: $textLite;
+      line-height: 1.4;
+
+      @include laptop {
+         display: none;
+         padding: 0 2rem;
+         text-align: center;
+         font-size: 1.6rem;
+      }
+
+      @include desktop {
+         padding: 0 3rem;
+         font-size: 2rem;
+      }
+   }
+
+   &__video-bg {
+      display: none;
+
+      @include laptop {
+         display: block;
+         z-index: -1;
+      }
+   }
+}

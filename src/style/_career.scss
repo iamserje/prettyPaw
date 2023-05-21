@@ -1,0 +1,122 @@
+.career {
+   padding-top: 8rem;
+   padding-bottom: 4rem;
+
+   @include laptop {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+   }
+
+   // .career__content
+   &__content {
+      margin-bottom: 4rem;
+
+      @include mobile {
+         display: grid;
+         grid-template-columns: 1fr min-content;
+         grid-template-areas: 'title link'
+                              'description description';
+         column-gap: 2.1rem;
+      }
+
+      @include laptop {
+         margin-bottom: 5rem;
+      }
+   }
+
+   // .career__title
+   &__title {
+      font-size: 3.2rem;
+      font-weight: 1000;
+      line-height: 1;
+      color: $textLite;
+      text-transform: uppercase;
+      margin-bottom: 2.4rem;
+
+      @include mobile {
+         grid-area: title;
+      }
+      @include laptop {
+         font-size: 5.2rem;
+         margin-bottom: 4rem;
+      }
+   }
+
+   // .career__description
+   &__description {
+      max-width: 52.8rem;
+      margin-bottom: 2.4rem;
+
+      @include mobile {
+         grid-area: description;
+         margin-bottom: 0;
+      }
+
+      @include tablet {
+         max-width: 52.8rem;
+      }
+
+      @include laptop {
+         min-width: 72rem;
+         font-size: 2rem;
+      }
+   }
+
+   // .career__link
+   &__link {
+      width: 15.5rem;
+      height: 3.6rem;
+
+      @include mobile {
+         grid-area: link;
+      }
+      @include laptop {
+         width: 20.9rem;
+         height: 5rem;
+      }
+   }
+
+
+   // .career__image-list
+   &__image-list {
+      // display: flex;
+      align-items: center;
+   }
+
+   // .career__image-item
+   &__image-item {
+      // height: unset;
+
+      @include mobile {
+         width: 48%;
+      }
+
+      @include tablet {
+         &_odd {
+            width: 34%;
+         }
+         &_even {
+            width: 25%;
+         }
+      }
+      @include desktop {
+         &:nth-child(odd) {
+            width: 26%;
+         }
+         &:nth-child(even) {
+            width: 20%;
+         }
+      }
+   }
+
+   // .career__img
+   &__img {
+      border-radius: 1.6rem;
+   }
+
+   .__slider-pagination {
+       @include mobile {
+         display: none;
+       }
+   }
+}

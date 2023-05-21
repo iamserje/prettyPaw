@@ -39,6 +39,8 @@
    }
 
    @include forek {
+      max-width: 2560px;
+      margin: 0 auto;
       background-image: url('../img/poster-desktop@2x.jpg');
       background-image: image-set(
          url('../img/webp/poster-desktop@4x.webp') 2x,

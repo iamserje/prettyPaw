@@ -3,4 +3,3 @@ dist
 .vscode
 package-lock.json
 static
-img/
