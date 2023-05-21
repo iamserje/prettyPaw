@@ -13,7 +13,7 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: Mulish, Arial, sans-serif;
+  font-family: Mulish, sans-serif;
   font-weight: 300;
   background-color: $back;
   color: $textDark;
@@ -71,6 +71,15 @@ iframe {
   transform: scale(0);
 }
 
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*
 Пример контейнера
 
@@ -80,16 +89,20 @@ iframe {
 Чтобы контент не прижимался к краям экрана
 */
 .container {
-  padding: 0 1.6rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 
   @include mobile {
-    padding: 0 2.4rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
   @include tablet {
-    padding: 0 3.2rem;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
   }
-  @include desctop {
-    padding: 0 3rem;
+  @include desktop {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
   @include forek {
     max-width: 256rem;

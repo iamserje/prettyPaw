@@ -1,0 +1,36 @@
+.navigation {
+
+   // .navigation__list
+
+   &__list {
+      display: none;
+   }
+
+   // .navigation__item
+
+   &__item {
+   }
+
+   // .navigation__link
+
+   &__link {
+   }
+
+   &__button {
+      display: block;
+      width: 2rem;
+      height: 1.2rem;
+      background: url(../img/svgs/burger.svg) center/contain;
+
+      @include laptop {
+         width: 2.6rem;
+         height: 1.6rem;
+      }
+
+      &_active {
+         height: 2rem;
+         background: url(../img/svgs/closeBurger.svg);
+      }
+   }
+}
+

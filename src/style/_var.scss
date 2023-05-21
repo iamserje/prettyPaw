@@ -1,36 +1,33 @@
 $back: #FFAA05;
-$textDark:#000000;
+$textDark: #000000;
 $textLite: #ffffff;
 
 @mixin mobile {
-   @media (min-width: 57.6rem) {
+   @media (min-width: 567px) {
       @content;
    }
 }
 
 @mixin tablet {
-   @media (min-width: 76.8rem) {
+   @media (min-width: 768px) {
       @content;
-}
+   }
 }
 
 @mixin laptop {
-   @media (min-width: 102.4rem) {
+   @media (min-width: 1024px) {
       @content;
-}
+   }
 }
 
-@mixin desctop {
-   @media (min-width: 124rem) {
+@mixin desktop {
+   @media (min-width: 1240px) {
       @content;
-}
+   }
 }
 
 @mixin forek {
-   @media (min-width: 160rem) {
+   @media (min-width: 1600px) {
       @content;
+   }
 }
-}
-
-
-
